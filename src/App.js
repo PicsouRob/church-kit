@@ -49,7 +49,7 @@ function App() {
                 <div className='bg-gray-50 px-4 pt-4 pb-3'>
                     <div className='flex items-center justify-between border border-gray-200 rounded-md'>
                         <input type="text" className='outline-none text-[12px] text-gray-400 px-2' placeholder='12 ce ou Gloire a Dieu' />
-                        <button className='bg-blue-700/10 px-2 h-full py-1 rounded-r-md'
+                        <button className='bg-blue-700/10 px-3 h-full py-2 rounded-r-md'
                             onClick={() => {}}
                         >
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-7 text-black font-bold">
@@ -58,7 +58,7 @@ function App() {
                         </button>
                     </div>
                 </div>
-                <div className='overflow-auto pb-12 transition-all duration-300 ease-out'>
+                <div className='overflow-auto pb-12 transition-all duration-300 ease-out flex-1 h-full bg-gray-50'>
                     { btnSelected === 0 ? (
                         <Chant />
                     ) : btnSelected === 1 ? (
@@ -73,7 +73,7 @@ function App() {
                             onClick={() => setBtnSelected(ind)}
                         >
                             <img src={item.icon} alt={item.item} className="w-6 h-4" />
-                            <p className={ `${btnSelected === ind && "font-medium text-blue-700"} text-[11px] text-gray-600` }>{ item.text }</p>
+                            <p className={ `${btnSelected === ind && "font-medium text-blue-700"} text-[12px] text-gray-600` }>{ item.text }</p>
                         </div>
                     ))}
                 </div>

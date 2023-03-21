@@ -5,7 +5,7 @@ import { chantData } from './data';
 function Chant() {
     return (
         <div>
-            <div className="flex-1 bg-gray-50 px-4 pb-3 space-y-1 overflow-auto">
+            <div className="flex-1 px-4 pb-3 space-y-1 overflow-auto min-h-full">
                 { chantData.map((item, ind) => (
                         <div key={ind} className='bg-white py-2 px-2 flex items-center justify-between rounded-md cursor-pointer'>
                             <div className='flex items-center gap-2 divide-x'>
@@ -15,8 +15,8 @@ function Chant() {
                                 </svg>
                             </div>
                             <div>
-                                <p className='text-[12px] pl-2 font-medium text-gray-700'>{ item.title }</p>
-                                <div className='flex items-center gap-2 text-[11px] text-gray-400'>
+                                <p className='text-[14px] pl-2 font-medium text-gray-700'>{ item.title }</p>
+                                <div className='flex items-center gap-2 text-[12px] text-gray-400'>
                                     <p className='pl-2'>{ item.type }</p>
                                     <hr className='h-1 w-1 bg-blue-700 rounded-full shadow-md outline-none' />
                                     <p className='pl-2'>{ item.quantutyOfChant } Chants</p>

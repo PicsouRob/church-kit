@@ -24,7 +24,7 @@ function App() {
     
     return (
         <div className="flex items-center justify-center min-h-screen bg-green-50">
-            <div className="relative shadow-lg max-w-[350px] max-h-[550px] flex flex-col overflow-hidden">
+            <div className="relative shadow-lg w-full sm:max-w-[350px] min-h-screen sm:min-h-[550px] flex flex-col overflow-hidden">
                 <div className="w-full flex items-center justify-between text-white bg-blue-700">
                     <div className='flex items-center gap-4 px-4 py-3'>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 ">
@@ -49,7 +49,7 @@ function App() {
                 <div className='bg-gray-50 px-4 pt-4 pb-3'>
                     <div className='flex items-center justify-between border border-gray-200 rounded-md'>
                         <input type="text" className='outline-none text-[12px] text-gray-400 px-2' placeholder='12 ce ou Gloire a Dieu' />
-                        <button className='bg-blue-700/10 px-2 h-full flex-1 py-1 rounded-r-md'
+                        <button className='bg-blue-700/10 px-2 h-full py-1 rounded-r-md'
                             onClick={() => {}}
                         >
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-7 text-black font-bold">
@@ -58,7 +58,7 @@ function App() {
                         </button>
                     </div>
                 </div>
-                <div className='overflow-auto pb-12'>
+                <div className='overflow-auto pb-12 transition-all duration-300 ease-out'>
                     { btnSelected === 0 ? (
                         <Chant />
                     ) : btnSelected === 1 ? (

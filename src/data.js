@@ -21,7 +21,7 @@ export const chantData = [
         type: "French"
     }  ,
     {
-        title: "Echo des reveils",
+        title: "Echo des elus",
         color: "text-[#bc6c25]",
         quantutyOfChant: 4,
         abre: "ER",

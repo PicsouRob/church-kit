@@ -24,8 +24,8 @@ function App() {
     
     return (
         <div className="flex items-center justify-center min-h-screen bg-green-50">
-            <div className="relative shadow-lg w-full sm:max-w-[350px] min-h-screen sm:min-h-[550px] flex flex-col overflow-hidden">
-                <div className="w-full flex items-center justify-between text-white bg-blue-700">
+            <div className="relative shadow-lg w-full sm:max-w-[350px] min-h-screen sm:min-h-[550px] flex flex-col overflow-hidden dark">
+                <div className="w-full flex items-center justify-between text-white bg-blue-700 dark:bg-secondary">
                     <div className='flex items-center gap-4 px-4 py-3'>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 ">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
@@ -46,19 +46,7 @@ function App() {
                         )}
                     </div>
                 </div>
-                <div className='bg-gray-50 px-4 pt-4 pb-3'>
-                    <div className='flex items-center justify-between border border-gray-200 rounded-md'>
-                        <input type="text" className='outline-none text-[12px] text-gray-400 px-2' placeholder='12 ce ou Gloire a Dieu' />
-                        <button className='bg-blue-700/10 px-3 h-full py-2 rounded-r-md'
-                            onClick={() => {}}
-                        >
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-7 text-black font-bold">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-                <div className='overflow-auto pb-12 transition-all duration-300 ease-out flex-1 h-full bg-gray-50'>
+                <div className='overflow-auto pb-12 transition-all duration-300 ease-out flex-1 h-full bg-gray-50 dark:bg-dark dark:text-white'>
                     { btnSelected === 0 ? (
                         <Chant />
                     ) : btnSelected === 1 ? (
@@ -67,13 +55,13 @@ function App() {
                         <Setting />
                     )}
                 </div>
-                <div className="absolute bottom-0 left-0 right-0 w-full flex items-center justify-between shadow-2xl border-t bg-white z-10">
+                <div className="absolute bottom-0 left-0 right-0 w-full flex items-center justify-between shadow-2xl border-t bg-white z-10 dark:bg-secondary dark:border-0">
                     { btnBottom.map((item, ind) => (
                         <div key={ ind } className="flex flex-col items-center justify-center px-6 py-2 cursor-pointer"
                             onClick={() => setBtnSelected(ind)}
                         >
-                            <img src={item.icon} alt={item.item} className="w-6 h-4" />
-                            <p className={ `${btnSelected === ind && "font-medium text-blue-700"} text-[12px] text-gray-600` }>{ item.text }</p>
+                            <img src={item.icon} alt={item.item} className="w-6 h-4 text-white" />
+                            <p className={ `${btnSelected === ind ? "font-medium text-blue-700 dark:text-slate-200" : "dark:text-slate-400 text-gray-600"} text-[12px]` }>{ item.text }</p>
                         </div>
                     ))}
                 </div>
